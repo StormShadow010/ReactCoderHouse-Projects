@@ -1,0 +1,48 @@
+.navBarContainer {
+    background-color: #1A1A2E;
+}
+
+.itemNav {
+    color: white;
+    font-size: 20px;
+
+    &:hover {
+        color: white;
+        transform: scale(1.1);
+        border-bottom: 3px outset #ff6550;
+    }
+
+
+}
+
+#navbarScrollingDropdown {
+    color: white;
+    font-size: 20px;
+}
+
+.navBarLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .logoStore img {
+        width: 85px;
+    }
+
+    .titleStore {
+        margin-left: 0px;
+        color: white;
+        font-size: 19px;
+    }
+
+    @media (min-width: 576px) {
+        .titleStore {
+            font-size: 30px;
+        }
+    }
+}
+
+.navbar-nav .nav-link.active {
+    color: #E94560;
+}
