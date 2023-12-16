@@ -9,20 +9,24 @@ import "./NavBarComponent.scss"
 import logoStore from "../../assets/images/logonavBar.png"
 import { CartWidgetComponent } from '../CartWidgetComponent/CartWidgetComponent';
 
+import { Link } from "react-router-dom";
+
 export const NavBarComponent = () => {
     return (
         <Navbar expand="lg" className="navBarContainer" sticky="top">
             <Container fluid>
-                <Navbar.Brand href="#">
-                    <Container className='navBarLeft'>
-                        <div className="logoStore">
-                            <img src={logoStore} alt="" />
-                        </div>
-                        <div className="titleStore">
-                            <p>S&S Gaming Nexus</p>
-                        </div>
-                    </Container>
-                </Navbar.Brand>
+                <Link to="/" >
+                    <Navbar.Brand>
+                        <Container className='navBarLeft'>
+                            <div className="logoStore">
+                                <img src={logoStore} alt="" />
+                            </div>
+                            <div className="titleStore">
+                                <p>S&S Gaming Nexus</p>
+                            </div>
+                        </Container>
+                    </Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" style={{ backgroundColor: "white" }} />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -30,8 +34,8 @@ export const NavBarComponent = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link className='itemNav' href="#action1">Home</Nav.Link>
-                        <Nav.Link className='itemNav' href="#action2">News</Nav.Link>
+                        <Nav.Link> <Link to="/" className='itemNav'>Home</Link></Nav.Link>
+                        <Nav.Link><Link to="/news" className='itemNav'>News</Link></Nav.Link>
                         <NavDropdown title="Categories" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">Adventure</NavDropdown.Item>
