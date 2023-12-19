@@ -1,13 +1,16 @@
-.itemListContainer {
+.productsContainer {
+    max-width: 100vw;
+    max-height: 100vh;
+
+
     display: flex;
     justify-content: center;
-    height: 100vh;
-    /* Ajusta la altura según tus necesidades */
-    background-color: #0F3460;
+    flex-wrap: wrap;
 
-    .message {
-        color: white;
-        font-size: 40px;
-        font-weight: bolder;
+    background: #0F3460;
+
+    .itemProduct {
+        margin: 10px;
     }
+
 }
