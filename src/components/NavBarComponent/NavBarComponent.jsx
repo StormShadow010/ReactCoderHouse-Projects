@@ -22,7 +22,7 @@ export const NavBarComponent = () => {
     return (
         <Navbar expand="lg" className="navBarContainer" sticky="top">
             <Container fluid>
-                <Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">
                     <Container className='navBarLeft'>
                         <div className="logoStore">
                             <img src={logoStore} alt="" />
