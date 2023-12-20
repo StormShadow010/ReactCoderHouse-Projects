@@ -12,6 +12,7 @@ export const useGetProducts = (pageGames, pageSize) => {
             .catch((error) => {
                 console.log(error);
             });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return { productsData }
